@@ -1,0 +1,429 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat.otf");
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url("../fonts/Dosis.otf");
+}
+
+*{
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    transition: 200ms !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden !important;
+}
+
+.navbar{
+    padding: 20px 70px 20px 70px !important;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: rgb(221, 151, 0);
+}
+
+.navbar .brand{
+    height: 60px;
+    width: 400px;
+}
+
+.navbar .brand .logo img{
+    line-height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+    transition: all 200ms !important;
+}
+
+.brand_text{
+    float: left;
+    display: flex;
+    height: 50px;
+    width: 200px;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.brand_text div:nth-child(1){
+    float: left;
+    font-weight: 600;
+    width: 100% !important;
+    color: white !important;
+    font-size: 22px;
+}
+
+.brand_text div:nth-child(2){
+    font-weight: 800;
+    width: 100% !important;
+    font-size: 15px;
+    color: rgb(100, 74, 74);
+    letter-spacing: 19px;
+}
+
+@media (max-width: 570px){
+    .navbar{
+        margin: 0;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .navbar .brand{
+        width: 280px;
+    }
+    .brand_text div:nth-child(1){
+        font-size: 20px;
+    }
+    
+    .brand_text div:nth-child(2){
+        font-size: 17px;
+        letter-spacing: 15px;
+    }
+}
+
+.navbar .nav_items{
+    float: right !important;
+}
+
+.navbar .nav_items a{
+    padding: 0px 20px;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.navbar .nav_items a:hover{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .nav_items .fa-bars{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.919);
+    display: none;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.navbar .nav_items .fa-bars:hover{
+    transform: scale(1.05);
+}
+
+.sidebar{
+    position: fixed;
+    width: 300px;
+    background-color: rgb(221, 151, 0);
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    transition: 400ms !important;
+    display: none;
+    z-index: 10;
+}
+
+@media (max-width: 1300px){
+    .navbar .nav_items a{
+        display: none;
+    }
+    
+    .navbar .nav_items .fa-bars{
+        display: block;
+    }
+
+    .sidebar{
+        display: block;
+    }
+}
+
+@media (max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.sidebar #close{
+    line-height: 100px !important;
+    position: relative;
+    text-align: right;
+    width: 100%;
+    background-color: rgb(221, 151, 0);
+}
+
+.sidebar #close .fa-times{
+    font-size: 25px;
+    color:  rgb(255, 255, 255);
+    margin-right: 70px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.sidebar #close .fa-times:hover{
+    transform: scale(1.07);
+}
+
+.sidebar .items{
+    padding: 30px 0px;
+    border-top: 1px solid  rgb(255, 255, 255);
+}
+
+.sidebar .items a{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    padding: 0px 30px;
+    color:  rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 200ms;
+}
+
+.sidebar .items a:hover{
+    background-color: rgba(0, 0, 0, 0.097);
+    color: rgba(0, 0, 0, 0.849);
+}
+
+.frontpage{
+    min-height: 100vh;
+    background-image: url("../images/bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 60vh;
+    padding-bottom: 30px;
+}
+
+.front_title{
+    width: 80vw;
+    background-color: rgba(221, 151, 0, 0.651);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    min-height: 100px;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.front_title .title01{
+    color: white;
+    font-family: Dosis;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.front_title .title02{
+    color: white;
+    font-family: Montserrat;
+    font-size: 30px;
+}
+
+.main{
+    padding: 20px 80px;
+    background-color: rgba(221, 151, 0, 0.096);
+}
+
+@media(max-width: 470px){
+    .main{
+        padding: 20px 40px
+    }
+}
+
+.main .card_out {
+    padding: 20px !important;
+    position: relative !important;
+}
+
+.main .card{
+    border: none !important;
+    width: 100% !important;
+    box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.144);
+}
+
+.main .card .card_title{
+    padding: 15px;
+}
+
+.main .card .card_title .card_title01{
+    font-family: Dosis;
+    font-size: 30px;
+    line-height: 30px;
+    color: black;
+}
+
+.main .card .card_title .card_title02{
+    font-family: Dosis;
+    font-size: 30px;
+    line-height: 30px;
+    color:  rgb(221, 151, 0);
+}
+
+.main .card .card-body p{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.933);
+}
+
+.about .jumbotron{
+    box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.144);
+}
+
+.j_title01, .j_title01 span{
+    font-family: Dosis;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.j_title01 span{
+    color:  rgb(221, 151, 0);
+}
+
+.about p{
+    color: rgba(0, 0, 0, 0.905);
+    font-size: 14px;
+    text-align: justify;
+}
+
+.contact01{
+    background-color: rgba(221, 151, 0, 0.863);
+    color: white !important;
+    padding: 0px 20px !important;
+}
+
+.contact_form .row{
+    box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.144);
+}
+
+.contact_row2{
+    background-color: white;
+}
+
+.contact_form p, .contact_form a{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.712);
+    transition: 300ms;
+}
+
+.contact_form a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.contact_form p span{
+    color: white !important;
+}
+
+.icon span{
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+  }
+
+.contact_row2 .form-group input, .contact_row2 .form-group textarea{
+    background: transparent;
+    border: 0 !important;
+    padding: 5px 0px 5px 0px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 0 !important;
+    font-size: 14px;
+    box-shadow: none !important;
+}
+
+.contact_row2 .form-group label{
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.submit_btn{
+    background-color: rgb(221, 151, 0) !important;
+    color: white !important;
+    border-radius: 0 !important;
+    border: none !important;
+    width: 150px !important;
+    line-height: 25px !important;
+    font-size: 15px !important;
+    float: right !important;
+    transition: 200ms;
+}
+
+.submit_btn:hover{
+    background-color: rgb(255, 186, 39) !important;
+}
+
+.accounts{
+    position: fixed;
+    left: 0;
+    top: 35vh;
+}
+
+.accounts a, .accounts button{
+    color: white !important;
+    font-size: 20px;
+    display: block;
+    width: 40px;
+    border: none !important;
+    outline: none !important;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.accounts a:hover, .accounts button:hover{
+    width: 50px;
+}
+
+.accounts a:nth-child(1){
+    background-color: rgb(22, 187, 0);
+}
+
+.accounts a:nth-child(2){
+    background-color: rgb(0, 51, 255);
+}
+
+.accounts a:nth-child(3){
+    background-color: rgb(0, 195, 255);
+}
+
+.accounts button{
+    background-color: rgb(85, 85, 85);
+}
+
+.accounts a:nth-child(5){
+    background-color: rgb(255, 0, 0);
+}
+
+.accounts a:nth-child(6){
+    background-color: rgb(255, 0, 204);
+}
+
+.footer{
+    padding: 40px 20px;
+    background-color: rgba(226, 176, 69, 0.507);
+}
+
+.footer div{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 12px;
+    font-weight: 600;
+}
